@@ -1,0 +1,24 @@
+# config ファイルの設定に従って、
+# 特定の author の PR や Issue を定期的にレポート化する
+name: Author Issue Report
+on:
+  # schedule:
+  #   # UTC
+  #   - cron: '0 2 * * 1'
+  # workflow_dispatch:
+  #   inputs: {}
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  COFIG_FILE: ./config.json
+  TZ: UTC
+permissions:
+  contents: read
+jobs:
+  report:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: bash make-report.sh
