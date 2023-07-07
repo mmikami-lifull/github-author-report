@@ -8,7 +8,7 @@ function dateFrom2Date() {
   DATE_FROM=$1
   DATE_FORMAT="+%Y-%m-%dT%H:%M:%SZ"
 
-  # date -v $DATE_FROM $DATE_FORMAT // for Mac
+  # date -v $DATE_FROM $DATE_FORMAT # for Mac
   date --date "$DATE_FROM" $DATE_FORMAT
 }
 
