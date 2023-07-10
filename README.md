@@ -43,6 +43,7 @@ https://github.com/mmikami-lifull/github-author-report/blob/f399325fc71729bc957a
 - ワークフローによって自動作成される `GITHUB_TOKEN` では、Organization 内の Private Repository の PR/Issue は取得できない。権限的エラーになる。
 
 ### ローカルで利用する場合
+- [jq のインストール](https://jqlang.github.io/jq/download/)
 - [こちらのAPI](https://docs.github.com/ja/rest/search/search?apiVersion=2022-11-28#search-issues-and-pull-requests)を実行できるように `GITHUB_TOKEN` を設定
 - `make-report.sh` の環境変数をコメントインする
 https://github.com/mmikami-lifull/github-author-report/blob/f399325fc71729bc957ac61fe75cb0eb903f78d5/make-report.sh#L3-L5
